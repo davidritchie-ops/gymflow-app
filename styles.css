@@ -3,6 +3,8 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
 }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -61,6 +63,7 @@ body.page-landing {
     align-items: flex-start;
     gap: 16px;
     margin-bottom: 24px;
+    contain: layout style;
 }
 .feature-icon {
     font-size: 1.5rem;
@@ -82,6 +85,7 @@ body.page-landing {
     border-radius: 16px;
     padding: 32px 24px;
     margin-bottom: 32px;
+    contain: layout style;
 }
 .support-section h2 {
     font-size: 1.3rem;
@@ -91,6 +95,8 @@ body.page-landing {
     color: #94a3b8;
     line-height: 1.6;
 }
+.support-email { margin-top: 12px; }
+.footer-link { margin-top: 8px; }
 .page-landing a { color: #2dd4bf; }
 
 /* ===================== */
@@ -109,6 +115,10 @@ body.page-privacy {
     color: #64748b;
     font-size: 0.9rem;
     margin-bottom: 36px;
+}
+.page-privacy section {
+    contain: layout style;
+    content-visibility: auto;
 }
 .page-privacy h2 {
     font-size: 1.25rem;
@@ -135,4 +145,11 @@ body.page-privacy {
 .page-privacy .footer {
     padding-top: 24px;
     border-top: 1px solid #e2e8f0;
+}
+
+/* === Print === */
+@media print {
+    body.page-landing { background: #fff; color: #000; }
+    .app-icon { background: #eee; }
+    .feature p, .tagline, .support-section p { color: #333; }
 }
