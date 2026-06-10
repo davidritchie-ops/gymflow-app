@@ -17,9 +17,103 @@
     <meta name="twitter:description" content="Track your workouts. Sync to Google Sheets. Train smarter.">
 
     <title>GymFlow - Workout Tracker for iPhone & Apple Watch</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x1F3CB;</text></svg>">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 100%);
+            color: #fff;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { color: #2dd4bf; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            text-align: center;
+        }
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #1a3a5c, #2dd4bf);
+            border-radius: 27px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 56px;
+            margin-bottom: 24px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .tagline {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 48px;
+        }
+        .features {
+            text-align: left;
+            margin-bottom: 48px;
+        }
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 24px;
+            contain: layout style;
+        }
+        .feature-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            width: 40px;
+            text-align: center;
+        }
+        .feature h3 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+        .feature p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .support-section {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 32px 24px;
+            margin-bottom: 32px;
+            contain: layout style;
+        }
+        .support-section h2 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+        }
+        .support-section p {
+            color: #94a3b8;
+            line-height: 1.6;
+        }
+        .support-email { margin-top: 12px; }
+        .footer {
+            color: #64748b;
+            font-size: 0.85rem;
+            margin-top: 48px;
+        }
+        .footer a { color: #64748b; }
+        .footer-link { margin-top: 8px; }
+        @media print {
+            body { background: #fff; color: #000; }
+            .app-icon { background: #eee; }
+            .feature p, .tagline, .support-section p { color: #333; }
+        }
+    </style>
 </head>
-<body class="page-landing">
+<body>
     <div class="container">
         <header>
             <div class="app-icon" role="img" aria-label="GymFlow app icon">&#x1F3CB;</div>
